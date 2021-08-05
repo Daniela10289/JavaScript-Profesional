@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <a href=""></a> -->
+    <p><em>Abre consola</em></p>
+
+    <script>
+        // closures
+        
+        // closures permite hacer una funcionalidad o fisur que
+        // el lenguaje no trae
+
+        // IIFE (Expresión de función ejecutada inmediatamente)
+
+        // (function() {
+        //     let color = 'green';
+        //     function printColor() {
+        //         console.log(color);
+        //     }
+        //     printColor();
+        // })();
+        
+        // funciones que regresan funciones
+
+        // function makeColorPrinter(color) {
+        //     let colorMessage = `The color is ${color}`;
+
+        //     return function() {
+        //         console.log(colorMessage);
+        //     }
+        // }
+
+        // let greenColorPrinter = makeColorPrinter("green");
+        // console.log(greenColorPrinter());
+
+        // variables privadas
+
+        // const counter = {
+        //     count: 3
+        // }
+        // console.log(counter.count); // este ejemplo la variable 
+        // no seria privada
+
+        function makeCounter(n) {
+            let count = n;
+
+            return {
+                increase: function() {
+                    count = count + 1;
+                },
+                decrease: function() {
+                    count = count - 1;
+                },
+                getCount: function() {
+                    return count;
+                },
+            };
+        }
+
+        let counter = makeCounter(7);
+        
+        console.log(counter.getCount());
+        counter.increase();
+        console.log(counter.getCount());
+        counter.decrease();
+        counter.decrease();
+        counter.decrease();
+        counter.decrease();
+        console.log(counter.getCount());
+
+        // el valor de una variable privada no se puede 
+        // leer o modificar directamente, esto se debe hacer
+        // a través de unas funciones que estan en el objeto
+        // que se regreso, eso es closures
+
+    </script>
+</body>
+</html>

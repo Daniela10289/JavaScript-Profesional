@@ -1,0 +1,14 @@
+.header {
+    /* background-color: #e6695b; */
+    width: 100%;
+    height: 80px;
+    text-align: center;
+}
+
+.container {
+    background-color: rgb(192, 228, 175);
+}
+
+.movie {
+    background-color: rgb(153, 153, 209);
+}

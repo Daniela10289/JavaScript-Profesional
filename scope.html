@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href=""></a>
+    <p><em>Abre consola</em></p>
+
+    <script>
+        // global scope
+
+        // toda variable que se declare fuera de una funcion o bloque
+        // va quedar en el scope global (el scope es window) 
+        var message = "hello people!";
+        // scope de funciones
+        var $ = function(mess) {
+            console.log('Say: ' + mess );
+        };
+
+        // function Scope
+
+        // function printNumbers(){
+        //     var i;
+        //     for(i = 0; i <= 10; i++) {
+        //         function eventuallyPrintNumber(n) {
+        //             setTimeout(function() {
+        //                 console.log(n);
+        //             }, 100);
+        //         }
+        //         eventuallyPrintNumber(i);
+        //     }
+        // }
+
+        // printNumbers();
+
+        // block scope
+
+        function printNumbers2() {
+            for(let i = 0; i <= 10; i++) {
+                setTimeout(function() {
+                    console.log(i);
+                }, 100);
+            }
+        }
+
+        printNumbers2();
+
+        // module scope
+
+    </script>
+</body>
+</html>

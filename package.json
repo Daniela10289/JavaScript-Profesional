@@ -1,0 +1,24 @@
+{
+  "name": "JavaScript-Profesional",
+  "version": "1.0.0",
+  "description": "Proyecto del curso profesional de JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Daniela10289/JavaScript-Profesional.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Daniela10289/JavaScript-Profesional/issues"
+  },
+  "homepage": "https://github.com/Daniela10289/JavaScript-Profesional#readme",
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
