@@ -34,24 +34,21 @@
         link.saludar();
 
         // código mas eficiente
-        function Hero () {
-            const hero = {
-                name:name
-            }
-            hero.saludar = function() {
-                console.log(`Hola soy ${this.name}`);
-            };
-            return hero
-        }
-        // const zelda = {
-        //     name: "zelda"
-        // }
+        function Hero (name) {
+            // const hero = Object.create(Hero.prototype);
+            this.name = name;
+            return Hero;
+        } 
 
-        // zelda.saludar = function() {
-        //   console.log(`Hola soy ${this.name}`);
-        // };
+        Hero.prototype.saludar = function() {
+            console.log(`New: ${this.name}`);
+        };
 
-        // zelda.saludar();
+        const zelda1 = new Hero('Mario');
+        zelda.saludar();
+
+        const link1 = new Hero('Luigi');
+        link.saludar();
 
     </script>
 </body>
