@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype</title>
+</head>
+<body>
+    <h1>Analisando Prototype</h1>
+    <p><em>Abre la consola</em></p>
+
+    <script>
+
+        // Un objeto común y corriente
+        const zelda = {
+            name: "zelda"
+        }
+
+        zelda.saludar = function() {
+          console.log(`Hola soy ${this.name}`);
+        };
+
+        zelda.saludar();
+
+        const link = {
+            name: "Link"
+        }
+
+        link.saludar = function() {
+          console.log(`Hola soy ${this.name}`);
+        };
+
+        link.saludar();
+
+        // código mas eficiente
+        function Hero () {
+            const hero = {
+                name:name
+            }
+            hero.saludar = function() {
+                console.log(`Hola soy ${this.name}`);
+            };
+            return hero
+        }
+        // const zelda = {
+        //     name: "zelda"
+        // }
+
+        // zelda.saludar = function() {
+        //   console.log(`Hola soy ${this.name}`);
+        // };
+
+        // zelda.saludar();
+
+    </script>
+</body>
+</html>
