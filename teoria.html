@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clase 12</title>
+</head>
+<body>
+    <h1>Clase Teorica</h1>
+    <ol>
+        <li>
+            <h4>Que hace un JS Engine</h4>
+            <ul>
+                <li type="disc">
+                    Recibe código fuente
+                </li>
+                <li type="disc">
+                    Parsea el codigo y produce un <br>
+                    Abstract Syntax Tree (AST)
+                </li>
+                <li type="disc">
+                    Se compila a bytecode y se ejecuta
+                </li>
+                <li type="disc">
+                    Se optimiza a machine code y se <br>
+                    reemplaza el código base
+                </li>
+            </ul>           
+        </li>
+        <li>
+            <h4>Parser</h4>
+            <ul>
+                <li type="disc">
+                    descompone el código fuente en tokens <br>
+                    al obtener los tokens pasa a Abstract Syntax Tree
+                </li>
+            </ul>
+        </li>
+        <li>
+            <h4>Google dice:</h4>
+            <ul>
+                <li type="disc">
+                    Parsin es del 15-20% del proceso de ejecución
+                </li>
+                <li type="disc">
+                   La mayoria del JavaScript en una página nunca se ejecuta
+                </li>
+                <li type="disc">
+                   Esto hace bundling y code splitting sea muy importante!
+                </li>
+            </ul>
+        </li>
+        <li>
+            <h4>Parser de V8</h4>
+            <ul>
+                <h5> Eager Parsing:</h5>
+                <li type="disc">
+                    Encuentra errores de sintaxis
+                </li>
+                <li type="disc">
+                   Crea el AST
+                </li>
+                <li type="disc">
+                    Construye scopes
+                </li>
+                <h5> Lazy Parsing:</h5>
+                <li type="disc">
+                    Doble de rápido que el eager parser
+                </li>
+                <li type="disc">
+                    No crea el AST
+                </li>
+                <li type="disc">
+                    Construye los scopes parcialmente
+                </li>
+            </ul>
+        </li>
+        <li>
+            <h4>Abstract Syntax Tree (AST)</h4> 
+            <ul>
+                <li type="disc">
+                    Es un grafo (Estructura de datos) <br>
+                    que representa un programa
+                </li>
+            </ul>
+        </li>
+    </ol>
+</body>
+</html>
