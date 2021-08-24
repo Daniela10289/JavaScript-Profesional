@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clase 18</title>
+</head>
+<body>
+
+    <!-- El proxy sirve para interceptar la lectura de propiedades de un objeto (los get, y set) entre muchas otras funciones. Así, antes de que la llamada llegue al objeto podemos manipularla con una lógica que nosotros definamos. -->
+
+    <h1>Manejo de proxy</h1>
+    <p>Abre consola</p>
+
+    <!-- 
+        levenshtein es un algoritmo que va encontrar la distancia entre dos cadenas
+        Distingue entre minusculas y mayusculas
+     -->
+    <script src="https://unpkg.com/fast-levenshtein@2.0.6/levenshtein.js"></script>
+    <script>
+
+        const target = {
+            red: 'rojo',
+            green: 'verde', 
+            blue: 'azul',
+        }
+
+        const handler = {
+            get(obj, prop) {
+                if (prop in obj) {
+                    return obj[prop]
+                }
+
+                // busca las llaves o propiedades
+                const suggestion = Object.keys(obj).find(key => {
+                   return Levenshtein.get(key, prop) <= 3;
+                });
+
+                if (suggestion) {
+                    console.log (`${prop} No se encontró. Quisiste decir ${suggestion} ?`);
+                }
+
+                return obj[prop];
+            }
+        }
+
+        const p = new Proxy(target, handler)
+
+    </script>
+</body>
+</html>
