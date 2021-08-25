@@ -9,3 +9,10 @@ const buttonMute = document.querySelector('#mute');
 const player = new mediaPlayer({ el: video, plugin: [new AutoPlay(), new AutoPause()] });
 button.onclick = () => player.play();
 buttonMute.onclick = () => player.mute();
+
+
+if ('ServiceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js').catch(error => {
+        console.log(error.message);
+    });
+}
