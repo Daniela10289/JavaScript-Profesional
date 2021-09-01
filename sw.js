@@ -36,14 +36,14 @@ self.addEventListener('fetch', event => {
 async function precache() {
     const cache = await caches.open(VERSION)
     return cache.addAll([
-        '/',
-        '/index.html',
-        '/assets/index.js',
-        '/assets/mediaPlayer.js',
-        '/assets/plugins/AutoPlay.js',
-        '/assets/plugins/AutoPause.js',
-        '/assets/index.css',
-        '/assets/img/educar-sobre-bullying.mp4',
+        // '/',
+        // '/index.html',
+        // '/assets/index.js',
+        // '/assets/mediaPlayer.js',
+        // '/assets/plugins/AutoPlay.js',
+        // '/assets/plugins/AutoPause.js',
+        // '/assets/index.css',
+        // '/assets/img/educar-sobre-bullying.mp4',
 
     ])
 }
