@@ -77,3 +77,36 @@ function fullName(firstName: string, lastName: string = 'Smith'): string {
 
 const Daniela = fullName('Agente')
 console.log(Daniela);
+
+ // Interfaces
+ enum Colores {
+    Rojo = "Rojo", // hubo que inicializarlos todos para que pudiera imprimir el nombre del color y no la posición
+    Verde = "Verde", 
+    Morado = "Morado",
+    Azul = "Azul",
+}
+
+ interface Rectangulo {
+     ancho: number 
+     alto: number
+     Color?: Color
+ }
+
+ let rect: Rectangulo = {
+     ancho: 4,
+     alto: 6,
+     Color: Color.Azul,     
+ }
+
+ function area(r: Rectangulo): number {
+     return r.alto * r.ancho;
+ }
+
+ const areaRect = area(rect);
+ console.log(areaRect);
+
+ rect.toString = function() {
+     return this.Color ? `Un rectangulo ${this.Color}` : `Un rectangulo`; // this se refiere a rect que es un rectangulo
+ }
+
+ console.log(rect.toString());
