@@ -1,7 +1,7 @@
-import mediaPlayer from './mediaPlayer';
-import AutoPlay from './plugins/AutoPlay';
-import AutoPause from './plugins/AutoPause';
-import Ads from './plugins/Ads';
+import mediaPlayer from '../../mediaplayer/src/mediaPlayer';
+import AutoPlay from '../../mediaplayer/src/plugins/AutoPlay';
+import AutoPause from '../../mediaplayer/src/plugins/AutoPause';
+import Ads from '../../mediaplayer/src/plugins/Ads';
 
 const video = document.querySelector('video');
 const button = document.querySelector('#play');
